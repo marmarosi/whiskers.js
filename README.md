@@ -148,6 +148,15 @@ exclamation points. They can include newlines, spaces, and other tags.
     <p>{!these words and this {tag} 
       will not be rendered!}</p>
 
+External functions can be called through the context:
+
+    <p>{fn(arguments)}</p>
+    <p>{obj_A.method_B(arg1, arg2, ...)}</p>
+
+E.g. when i18next is installed:
+
+    <p>{t('engine', { name: "Whiskers", lng: "hu" })}</p>
+
 Any tag is escaped from rendering by prepending a backslash:
 
     \{variable}
